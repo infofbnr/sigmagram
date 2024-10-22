@@ -123,3 +123,8 @@ select {
     font-weight: bold;
     color: #16a085;
 }
+
+.price-display {
+    margin-top: 10px;
+    font-weight: bold;
+}
