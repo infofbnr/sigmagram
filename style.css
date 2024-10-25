@@ -139,3 +139,29 @@ select {
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
+/* Apply styles to make the favicon circular */
+.lmao {
+    border-radius: 9999px;
+    border-top-left-radius: 9999px;
+    border-top-right-radius: 9999px;
+    border-bottom-right-radius: 9999px;
+    border-bottom-left-radius: 9999px; /* Makes it circular */
+}
+.lmao2 {
+    object-fit: contain;
+}
+.header {
+    display: flex;
+    align-items: center; /* Center-align vertically */
+    gap: 10px; /* Space between image and text */
+}
+
+.logo {
+    width: 50px; /* Adjust size as needed */
+    height: 50px;
+}
+
+.site-title {
+    font-size: 2rem; /* Adjust font size as needed */
+    margin: 0;
+}
