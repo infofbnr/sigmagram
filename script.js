@@ -51,7 +51,7 @@ function showService() {
             <span class="price-display" id="price-views-instagram">Price: $0.00</span>
             <button class="add-to-cart" onclick="addToCart('Instagram Views', 0.045, document.getElementById('views-quantity-instagram').value)">Add to Cart</button><br>
             - Instagram Saves: 0.20$ / 1,000 
-            <input type="number" id="views-quantity-instagram" placeholder="Qty (e.g., 10000)" min="1"  oninput="updatePrice('Instagram Saves', 0.2, 'saves-quantity-instagram')">
+            <input type="number" id="saves-quantity-instagram" placeholder="Qty (e.g., 10000)" min="1"  oninput="updatePrice('Instagram Saves', 0.2, 'saves-quantity-instagram')">
             <span class="price-display" id="price-saves-instagram">Price: $0.00</span>
             <button class="add-to-cart" onclick="addToCart('Instagram Saves', 0.2, document.getElementById('saves-quantity-instagram').value)">Add to Cart</button><br>
             - Instagram Shares: 0.90$ / 1,000 
