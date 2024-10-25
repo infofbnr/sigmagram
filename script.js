@@ -117,14 +117,103 @@ function updateCartSummary() {
     totalCostElement.innerText = `Total: $${totalCost.toFixed(2)}`;
 }
 
-function removeFromCart(index) {
-    const itemCost = cart[index].cost; // Get the cost of the item to be removed
-    totalCost -= itemCost; // Update total cost by subtracting the item cost
-    cart.splice(index, 1); // Remove the item from cart
-    updateCartSummary(); // Refresh the cart display
-}
-
 function toggleCart() {
     const cartModal = document.getElementById('cart-modal');
     cartModal.style.display = cartModal.style.display === 'block' ? 'none' : 'block';
+}
+let itemCount = 0;
+
+function addToCart(serviceName, price, quantity) {
+    if (quantity <= 0) return;
+
+    // Check if the item already exists in the cart
+    const existingItemIndex = cart.findIndex(item => item.name === serviceName);
+    
+    if (existingItemIndex === -1) {
+        // Item doesn't exist, add new item
+        const item = {
+            name: serviceName,
+            price: price,
+            quantity: parseInt(quantity),
+        };
+        cart.push(item);
+        itemCount++; // Increase the unique item count
+    } else {
+        // Item exists, update its quantity
+        cart[existingItemIndex].quantity += parseInt(quantity);
+    }
+
+    updateCartDisplay();
+}
+
+function updateCartDisplay() {
+    const cartItemsElement = document.getElementById('cart-items');
+    const totalCostElement = document.getElementById('total-cost');
+    const itemCountElement = document.getElementById('item-count');
+    
+    cartItemsElement.innerHTML = '';
+    let totalCost = 0;
+
+    cart.forEach(item => {
+        const itemTotal = (item.price * item.quantity) / 1000; // Correct calculation
+        totalCost += itemTotal;
+        cartItemsElement.innerHTML += `<li>${item.name}: ${item.quantity} @ $${item.price.toFixed(2)} / 1000 - Total: $${itemTotal.toFixed(2)}</li>`;
+    });
+
+    totalCostElement.innerHTML = `Total: $${totalCost.toFixed(2)}`;
+    itemCountElement.innerHTML = itemCount; // Update the item count display
+}
+function addToCart(serviceName, price, quantity) {
+    if (quantity <= 0) return;
+
+    const existingItemIndex = cart.findIndex(item => item.name === serviceName);
+    
+    if (existingItemIndex === -1) {
+        // Item doesn't exist, add new item
+        const item = {
+            name: serviceName,
+            price: price,
+            quantity: parseInt(quantity),
+        };
+        cart.push(item);
+        itemCount++; // Increase the unique item count
+    } else {
+        // Item exists, update its quantity
+        cart[existingItemIndex].quantity += parseInt(quantity);
+    }
+
+    updateCartDisplay();
+}
+
+function removeFromCart(itemName) {
+    const itemIndex = cart.findIndex(item => item.name === itemName);
+    
+    if (itemIndex !== -1) {
+        cart.splice(itemIndex, 1); // Remove item from the cart
+        itemCount--; // Decrease the unique item count
+    }
+    
+    updateCartDisplay();
+}
+
+function updateCartDisplay() {
+    const cartItemsElement = document.getElementById('cart-items');
+    const totalCostElement = document.getElementById('total-cost');
+    const itemCountElement = document.getElementById('item-count');
+    
+    cartItemsElement.innerHTML = '';
+    let totalCost = 0;
+
+    cart.forEach(item => {
+        const itemTotal = (item.price * item.quantity) / 1000; // Correct calculation
+        totalCost += itemTotal;
+        cartItemsElement.innerHTML += `
+            <li>
+                ${item.name}: ${item.quantity} @ $${item.price.toFixed(2)} / 1000 - Total: $${itemTotal.toFixed(2)} 
+                <button onclick="removeFromCart('${item.name}')">Remove</button>
+            </li>`;
+    });
+
+    totalCostElement.innerHTML = `Total: $${totalCost.toFixed(2)}`;
+    itemCountElement.innerHTML = itemCount; // Update the item count display
 }
