@@ -1,4 +1,4 @@
-<<<<<<< Updated upstream
+
 const cart = [];
 let totalCost = 0;
 
@@ -105,9 +105,6 @@ function toggleCart() {
     const cartModal = document.getElementById('cart-modal');
     cartModal.style.display = cartModal.style.display === 'block' ? 'none' : 'block';
 }
-=======
-const cart = [];
-let totalCost = 0;
 
 function showService() {
     const descriptionElement = document.getElementById('service-description');
@@ -212,4 +209,3 @@ function toggleCart() {
     const cartModal = document.getElementById('cart-modal');
     cartModal.style.display = cartModal.style.display === 'block' ? 'none' : 'block';
 }
->>>>>>> Stashed changes
