@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -41,3 +42,48 @@
     <script src="script.js"></script>
 </body>
 </html>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sigmagram</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 class="site-title">Sigmagram</h1>
+    
+    <h2>Choose a Service</h2>
+    <div class="dropdown-container">
+        <select name="services" id="services" onchange="showService()">
+            <option value="none">Select a service</option>
+            <option value="tiktok">TikTok Services</option>
+            <option value="instagram">Instagram Services</option>
+        </select>
+    </div>
+
+    <div id="service-description" class="description">
+        <p>Select a service to see details.</p>
+    </div>
+    <p>Payment Methods: Whish / Alfa</p>
+    <!-- Cart Floating Icon -->
+    <div id="cart-icon" onclick="toggleCart()">
+        🛒
+    </div>
+
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="cart-modal">
+        <div class="cart-content">
+            <span class="close" onclick="toggleCart()">&times;</span>
+            <h3>Your Cart</h3>
+            <ul id="cart-items"></ul>
+            <p id="total-cost">Total: $0.00</p>
+            <button id="buttons" onclick="whatsApp()">Order Now!</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+>>>>>>> Stashed changes
