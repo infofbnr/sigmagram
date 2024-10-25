@@ -128,3 +128,13 @@ select {
     margin-top: 10px;
     font-weight: bold;
 }
+
+#buttons {
+    background-color: #55d9dd;
+    color: rgb(49, 118, 209);
+    font-size: 15px;
+    padding: 5px;
+    border-radius: 10%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}

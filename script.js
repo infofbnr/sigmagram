@@ -43,7 +43,21 @@ function showService() {
 
     descriptionElement.innerHTML = `<p>${serviceText}</p>`;
 }
+function whatsApp() {
+    const phoneNumber = "+96181243405"; // Replace with your WhatsApp number
+    let message = "Hello! I would like to order:\n";
 
+    cart.forEach(item => {
+        message += `${item.serviceName}: ${item.totalFollowers} followers for $${item.cost.toFixed(2)}\n`;
+    });
+
+    message += `\nTotal Cost: $${totalCost.toFixed(2)}`;
+    const encodedMessage = encodeURIComponent(message);
+    const whatsAppURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+
+    // Open WhatsApp link
+    window.open(whatsAppURL, "_blank");
+}
 function updatePrice(serviceName, pricePerUnit, quantityId) {
     const quantityInput = document.getElementById(quantityId);
     const quantity = parseInt(quantityInput.value) || 0;
