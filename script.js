@@ -217,3 +217,24 @@ function updateCartDisplay() {
     totalCostElement.innerHTML = `Total: $${totalCost.toFixed(2)}`;
     itemCountElement.innerHTML = itemCount; // Update the item count display
 }
+
+let userBalance = 0.00; // Example starting balance
+
+function displayBalance() {
+    const balanceElement = document.getElementById('balance-display');
+    balanceElement.innerText = `Balance: $${userBalance.toFixed(2)}`;
+}
+
+function updateBalance(amount) {
+    userBalance += amount; // Modify balance by amount (positive or negative)
+    displayBalance(); // Update balance display in profile modal
+}
+
+// Call displayBalance() when the profile modal opens
+function toggleProfile() {
+    const profileModal = document.getElementById('profile-modal');
+    profileModal.style.display = profileModal.style.display === 'block' ? 'none' : 'block';
+    if (profileModal.style.display === 'block') {
+        displayBalance();
+    }
+}

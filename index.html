@@ -33,6 +33,11 @@
         🛒 <span id="item-count" class="item-count">0</span>
     </div>
 
+    <div id="profile" onclick="toggleProfile()">
+        👤
+    </div>
+
+
     <!-- Cart Modal -->
     <div id="cart-modal" class="cart-modal">
         <div class="cart-content">
@@ -43,6 +48,15 @@
             <button id="buttons" onclick="whatsApp()">Order Now!</button>
         </div>
     </div>
+    <div id="profile-modal" class="profile-modal">
+        <div class="profile-content">
+            <span class="close" onclick="toggleProfile()">&times;</span>
+            <h3>Your Profile</h3>
+            <p id="balance-display">Balance: $0.00</p> <!-- Balance Display -->
+            <ul id="profile-items"></ul>
+        </div>
+    </div>
+
 
     <script src="script.js"></script>
 </body>
