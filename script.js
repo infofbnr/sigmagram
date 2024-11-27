@@ -11,18 +11,18 @@ function showService() {
     if (selectedService === 'tiktok') {
         serviceText = `
             <strong>TikTok Services:</strong><br>
-            - TikTok Followers: 2$ / 1,000 
-            <input type="number" id="followers-quantity" placeholder="Qty (e.g., 5000)" min="1" oninput="updatePrice('TikTok Followers', 2, 'followers-quantity')">
+            - TikTok Followers: 3$ / 1,000 
+            <input type="number" id="followers-quantity" placeholder="Qty (e.g., 5000)" min="1" oninput="updatePrice('TikTok Followers', 3, 'followers-quantity')">
             <span class="price-display" id="price-followers">Price: $0.00</span>
-            <button class="add-to-cart" onclick="addToCart('TikTok Followers', 2, document.getElementById('followers-quantity').value)">Add to Cart</button><br>
+            <button class="add-to-cart" onclick="addToCart('TikTok Followers', 3, document.getElementById('followers-quantity').value)">Add to Cart</button><br>
             - TikTok Likes: 0.45$ / 1,000 
             <input type="number" id="likes-quantity" placeholder="Qty (e.g., 2000)" min="1" oninput="updatePrice('TikTok Likes', 0.45, 'likes-quantity')">
             <span class="price-display" id="price-likes">Price: $0.00</span>
             <button class="add-to-cart" onclick="addToCart('TikTok Likes', 0.45, document.getElementById('likes-quantity').value)">Add to Cart</button><br>
-            - TikTok Views: 0.0012$ / 1,000 
-            <input type="number" id="views-quantity" placeholder="Qty (e.g., 10000)" min="1" oninput="updatePrice('TikTok Views', 0.0012, 'views-quantity')">
+            - TikTok Views: 0.00075$ / 1,000 
+            <input type="number" id="views-quantity" placeholder="Qty (e.g., 10000)" min="1" oninput="updatePrice('TikTok Views', 0.00075, 'views-quantity')">
             <span class="price-display" id="price-views">Price: $0.00</span>
-            <button class="add-to-cart" onclick="addToCart('TikTok Views', 0.0012, document.getElementById('views-quantity').value)">Add to Cart</button><br>
+            <button class="add-to-cart" onclick="addToCart('TikTok Views', 0.00075, document.getElementById('views-quantity').value)">Add to Cart</button><br>
             - TikTok Saves: 0.45$ / 1,000 
             <input type="number" id="saves-quantity" placeholder="Qty (e.g., 10000)" min="1"  oninput="updatePrice('TikTok Saves', 0.45, 'saves-quantity')">
             <span class="price-display" id="price-saves">Price: $0.00</span>
@@ -38,22 +38,22 @@ function showService() {
     } else if (selectedService === 'instagram') {
         serviceText = `
             <strong>Instagram Services:</strong><br>
-            - Instagram Followers: 2$ / 1,000 
-            <input type="number" id="followers-quantity-instagram" placeholder="Qty (e.g., 5000)" min="1"  oninput="updatePrice('Instagram Followers', 2, 'followers-quantity-instagram')">
+            - Instagram Followers: 2.5$ / 1,000 
+            <input type="number" id="followers-quantity-instagram" placeholder="Qty (e.g., 5000)" min="1"  oninput="updatePrice('Instagram Followers', 2.5, 'followers-quantity-instagram')">
             <span class="price-display" id="price-followers-instagram">Price: $0.00</span>
-            <button class="add-to-cart" onclick="addToCart('Instagram Followers', 2, document.getElementById('followers-quantity-instagram').value)">Add to Cart</button><br>
+            <button class="add-to-cart" onclick="addToCart('Instagram Followers', 2.5, document.getElementById('followers-quantity-instagram').value)">Add to Cart</button><br>
             - Instagram Likes: 0.08$ / 1,000 
             <input type="number" id="likes-quantity-instagram" placeholder="Qty (e.g., 2000)" min="1"  oninput="updatePrice('Instagram Likes', 0.08, 'likes-quantity-instagram')">
             <span class="price-display" id="price-likes-instagram">Price: $0.00</span>
             <button class="add-to-cart" onclick="addToCart('Instagram Likes', 0.08, document.getElementById('likes-quantity-instagram').value)">Add to Cart</button><br>
-            - Instagram Views: 0.045$ / 1,000 
-            <input type="number" id="views-quantity-instagram" placeholder="Qty (e.g., 10000)" min="1"  oninput="updatePrice('Instagram Views', 0.045, 'views-quantity-instagram')">
+            - Instagram Views: 0.035$ / 1,000 
+            <input type="number" id="views-quantity-instagram" placeholder="Qty (e.g., 10000)" min="1"  oninput="updatePrice('Instagram Views', 0.035, 'views-quantity-instagram')">
             <span class="price-display" id="price-views-instagram">Price: $0.00</span>
-            <button class="add-to-cart" onclick="addToCart('Instagram Views', 0.045, document.getElementById('views-quantity-instagram').value)">Add to Cart</button><br>
-            - Instagram Saves: 0.20$ / 1,000 
-            <input type="number" id="saves-quantity-instagram" placeholder="Qty (e.g., 10000)" min="1"  oninput="updatePrice('Instagram Saves', 0.2, 'saves-quantity-instagram')">
+            <button class="add-to-cart" onclick="addToCart('Instagram Views', 0.035, document.getElementById('views-quantity-instagram').value)">Add to Cart</button><br>
+            - Instagram Saves: 0.10$ / 1,000 
+            <input type="number" id="saves-quantity-instagram" placeholder="Qty (e.g., 10000)" min="1"  oninput="updatePrice('Instagram Saves', 0.1, 'saves-quantity-instagram')">
             <span class="price-display" id="price-saves-instagram">Price: $0.00</span>
-            <button class="add-to-cart" onclick="addToCart('Instagram Saves', 0.2, document.getElementById('saves-quantity-instagram').value)">Add to Cart</button><br>
+            <button class="add-to-cart" onclick="addToCart('Instagram Saves', 0.1, document.getElementById('saves-quantity-instagram').value)">Add to Cart</button><br>
             - Instagram Shares: 0.90$ / 1,000 
             <input type="number" id="shares-quantity-instagram" placeholder="Qty (e.g., 10000)" min="1"  oninput="updatePrice('Instagram Shares', 0.9, 'shares-quantity-instagram')">
             <span class="price-display" id="price-shares-instagram">Price: $0.00</span>
@@ -216,25 +216,4 @@ function updateCartDisplay() {
 
     totalCostElement.innerHTML = `Total: $${totalCost.toFixed(2)}`;
     itemCountElement.innerHTML = itemCount; // Update the item count display
-}
-
-let userBalance = 0.00; // Example starting balance
-
-function displayBalance() {
-    const balanceElement = document.getElementById('balance-display');
-    balanceElement.innerText = `Balance: $${userBalance.toFixed(2)}`;
-}
-
-function updateBalance(amount) {
-    userBalance += amount; // Modify balance by amount (positive or negative)
-    displayBalance(); // Update balance display in profile modal
-}
-
-// Call displayBalance() when the profile modal opens
-function toggleProfile() {
-    const profileModal = document.getElementById('profile-modal');
-    profileModal.style.display = profileModal.style.display === 'block' ? 'none' : 'block';
-    if (profileModal.style.display === 'block') {
-        displayBalance();
-    }
 }
