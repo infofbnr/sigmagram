@@ -10,6 +10,7 @@
     <link rel="icon" href="sigmagramlogo.ico">
 </head>
 <body>
+    <div id="splash" onclick="start()"></div>
     <div class="header">
         <img class="logo lmao lmao2" src="sigmagram.ico" width="150" height="150">
         <h1 class="site-title">Sigmagram</h1>
@@ -43,7 +44,11 @@
             <button id="buttons" onclick="whatsApp()">Order Now!</button>
         </div>
     </div>
-
+    <div id="music-controls">
+        <button id="play-pause-btn">Pause Music</button>
+    </div>
+    <audio id="bgm" src="sigmaboy.mp3" loop></audio>
+    
     <script src="script.js"></script>
 </body>
 </html>

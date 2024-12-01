@@ -251,3 +251,44 @@ select {
     color: #16a085;
 }
 
+#splash {
+    /* (A1) FULLSCREEN */
+    position: fixed; top: 0; left: 0; z-index: 999;
+    width: 100vw; height: 100vh;
+  
+    /* (A2) CENTER */
+    display: flex;
+    align-items: center; justify-content: center;
+  
+    /* (A3) COSMETICS */
+    font-size: 24px;
+    color: #fff;
+  }
+  
+  /* (A4) TO HIDE THE SPLASH SCREEN */
+  #splash.hide {
+    opacity: 0; visibility: hidden;
+    transition: all 1s;
+  }
+
+#music-controls {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 1000;
+}
+
+#play-pause-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background: #58a6ff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#play-pause-btn:hover {
+    background: #2ea043;
+}

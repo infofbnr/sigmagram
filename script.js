@@ -217,3 +217,29 @@ function updateCartDisplay() {
     totalCostElement.innerHTML = `Total: $${totalCost.toFixed(2)}`;
     itemCountElement.innerHTML = itemCount; // Update the item count display
 }
+const audio = document.getElementById('bgm');
+const playPauseButton = document.getElementById('play-pause-btn');
+
+// Play/Pause Button
+playPauseButton.addEventListener('click', () => {
+    if (audio.paused) {
+        audio.play();
+        playPauseButton.textContent = 'Pause Music';
+    } else {
+        audio.pause();
+        playPauseButton.textContent = 'Play Music';
+    }
+});
+function start () {
+    // (PART A) GET SPLASH SCREEN 
+    let splash = document.getElementById("splash");
+  
+    // (PART B) PLAY BGM & REMOVE SPLASH SCREEN AFTER FADE IN
+    splash.addEventListener("transitionend", () => {
+      document.getElementById("bgm").play();
+      splash.remove();
+    });
+  
+    // (PART C) GO!
+    splash.classList.add("hide");
+  }
