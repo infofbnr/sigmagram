@@ -23,14 +23,29 @@
             <option value="instagram">Instagram Services</option>
         </select>
     </div>
-
+    
+    <div id="tiktok-services" class="service-dropdown">
+        <select id="tiktok-select" style="display:none;" onchange="showServiceDetails('tiktok')">
+            <option value="none">Select TikTok service</option>
+            <!-- TikTok options will be added dynamically -->
+        </select>
+    </div>
+    
+    <div id="instagram-services" class="service-dropdown">
+        <select id="instagram-select" style="display:none;" onchange="showServiceDetails('instagram')">
+            <option value="none">Select Instagram service</option>
+            <!-- Instagram options will be added dynamically -->
+        </select>
+    </div>
+    
     <div id="service-description" class="description">
         <p>Select a service to see details.</p>
     </div>
+    
     <p>Payment Methods: Whish / Alfa</p>
     <!-- Cart Floating Icon -->
     <div id="cart-icon" onclick="toggleCart()">
-        🛒 <span id="item-count" class="item-count">0</span>
+        🛒 <span id="item-count" class="item-count"></span>
     </div>
 
     <!-- Cart Modal -->
