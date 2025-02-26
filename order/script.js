@@ -26,11 +26,11 @@ function showService() {
 
 function updateServiceDropdown(service) {
     const tiktokServices = [
-        { name: "TikTok Followers", price: 3.85 },
-        { name: "TikTok Likes", price: 0.4 },
-        { name: "TikTok Views", price: 0.0035 },
-        { name: "TikTok Saves", price: 0.65 },
-        { name: "TikTok Shares", price: 0.65 }
+        { name: "TikTok Followers", price: 3.2 }, //3.85
+        { name: "TikTok Likes", price: 0.3 }, //0.4
+        { name: "TikTok Views", price: 0.0035 }, //0.0035
+        { name: "TikTok Saves", price: 0.65 }, //0.65
+        { name: "TikTok Shares", price: 0.65 } //0.65
     ];
     const instagramServices = [
         { name: "Instagram Followers", price: 2.5 },
