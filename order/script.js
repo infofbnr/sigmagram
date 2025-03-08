@@ -60,8 +60,8 @@ function showServiceDetails(service) {
     const descriptionElement = document.getElementById('service-description');
     
     const tiktokServices = [
-        { name: "TikTok Followers", price: 3.85 },
-        { name: "TikTok Likes", price: 0.4 },
+        { name: "TikTok Followers", price: 3.2 },
+        { name: "TikTok Likes", price: 0.3 },
         { name: "TikTok Views", price: 0.0035 },
         { name: "TikTok Saves", price: 0.65 },
         { name: "TikTok Shares", price: 0.65 }
