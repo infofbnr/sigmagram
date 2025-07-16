@@ -26,17 +26,17 @@ function showService() {
 
 function updateServiceDropdown(service) {
     const tiktokServices = [
-        { name: "TikTok Followers", price: 3.2 }, //3.85
-        { name: "TikTok Likes", price: 0.3 }, //0.4
-        { name: "TikTok Views", price: 0.0035 }, //0.0035
-        { name: "TikTok Saves", price: 0.65 }, //0.65
-        { name: "TikTok Shares", price: 0.65 } //0.65
+        { name: "TikTok Followers", price: 3.44 }, //3.85
+        { name: "TikTok Likes", price: 0.32 }, //0.4
+        { name: "TikTok Views", price: 0.0016 }, //0.0035
+        { name: "TikTok Saves", price: 0.62 }, //0.65
+        { name: "TikTok Shares", price: 0.62 } //0.65
     ];
     const instagramServices = [
-        { name: "Instagram Followers", price: 2.5 },
+        { name: "Instagram Followers", price: 2.15 },
         { name: "Instagram Likes", price: 0.2 },
         { name: "Instagram Views", price: 0.06 },
-        { name: "Instagram Saves", price: 0.15 },
+        { name: "Instagram Saves", price: 0.2 },
         { name: "Instagram Shares", price: 0.35 }
     ];
 
@@ -60,18 +60,18 @@ function showServiceDetails(service) {
     const descriptionElement = document.getElementById('service-description');
     
     const tiktokServices = [
-        { name: "TikTok Followers", price: 3.2 },
-        { name: "TikTok Likes", price: 0.3 },
-        { name: "TikTok Views", price: 0.0035 },
-        { name: "TikTok Saves", price: 0.65 },
-        { name: "TikTok Shares", price: 0.65 }
+        { name: "TikTok Followers", price: 3.44 }, //3.2
+        { name: "TikTok Likes", price: 0.32 }, //0.3
+        { name: "TikTok Views", price: 0.0016 }, //0.0035
+        { name: "TikTok Saves", price: 0.62 }, //0.65
+        { name: "TikTok Shares", price: 0.62 } //0.65
     ];
     const instagramServices = [
-        { name: "Instagram Followers", price: 2.5 },
-        { name: "Instagram Likes", price: 0.2 },
-        { name: "Instagram Views", price: 0.06 },
-        { name: "Instagram Saves", price: 0.15 },
-        { name: "Instagram Shares", price: 0.35 }
+        { name: "Instagram Followers", price: 2.15 }, //2.5
+        { name: "Instagram Likes", price: 0.2 }, //0.2
+        { name: "Instagram Views", price: 0.06 }, //0.06
+        { name: "Instagram Saves", price: 0.2 }, //0.15
+        { name: "Instagram Shares", price: 0.35 } //0.35
     ];
 
     const serviceList = service === 'tiktok' ? tiktokServices : instagramServices;
